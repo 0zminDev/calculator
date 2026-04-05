@@ -4,8 +4,12 @@ const ModuleConstraint = struct {
 };
 
 pub const path_constraints = struct {
-    pub const calculator_cli: ModuleConstraint = .{
-        .name = "calculator-cli",
+    pub const lib: ModuleConstraint = .{
+        .name = "lib",
         .path = "src/root.zig",
+    };
+    pub const app: ModuleConstraint = .{
+        .name = "app",
+        .path = "src/main.zig",
     };
 };
